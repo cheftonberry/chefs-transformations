@@ -14,13 +14,6 @@ Each form preset captures the animation, audio, and sustain settings selected wh
 
 **Sustain Aura** keeps the aura and audio playing until you revert. Otherwise, they play once and fade out.
 
-## Player access
-
-Uncheck **Transformations GM only?** to let players use presets for actors they own.
-
-- **D&D5e:** Uses the system’s transformation options and permissions.
-- **PF2e:** Uses a temporary copy of the target’s full actor sheet and restores the original when you revert. A GM must be online for players to transform.
-
 ## License
 
 Bundled animations use the [Chef's Transformations Asset License](ASSET-LICENSE.md). You may use them in Foundry games and gameplay recordings, but may not redistribute or resell them as standalone assets or asset packs. This license does not cover the module's code.
