@@ -1,0 +1,28 @@
+<div class="standard-form chefs-transformations-manager">
+  <section>
+    <h2>Import Transformation Pack</h2>
+    <p class="hint">Choose a Chef's Transformations ZIP downloaded from Patreon. Importing the same pack again updates it.</p>
+    <div class="form-group">
+      <label>Transformation Pack ZIP</label>
+      <div class="form-fields"><input type="file" name="transformationPack" accept=".zip,application/zip"></div>
+    </div>
+    <button type="button" data-action="import"><i class="fa-solid fa-file-import"></i> Import Transformation Pack</button>
+    <div class="chefs-transformations-import-status" data-import-status role="status" aria-live="polite" hidden>
+      <i class="fa-solid fa-spinner fa-spin"></i><span>Starting import…</span>
+    </div>
+  </section>
+  <section>
+    <h2>Installed Packs</h2>
+    <div class="chefs-transformations-import-status" data-removal-status role="status" aria-live="polite" hidden>
+      <i class="fa-solid fa-spinner fa-spin"></i><span>Removing transformation pack…</span>
+    </div>
+    {{#if packs.length}}
+      <ol class="chefs-transformations-pack-list">
+      {{#each packs}}
+        <li><div><strong>{{title}}</strong><span>Version {{version}} · {{animations.length}} transformation(s)</span></div>
+          <button type="button" data-action="remove" data-pack-id="{{id}}" aria-label="Remove {{title}}"><i class="fa-solid fa-trash"></i></button></li>
+      {{/each}}
+      </ol>
+    {{else}}<p class="notification info">No additional transformation packs are installed.</p>{{/if}}
+  </section>
+</div>

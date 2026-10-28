@@ -1,0 +1,26 @@
+/* Keep token videos outside document layout as the camera pans and zooms. */
+body > video.ctfx-token-effect {
+  position: fixed;
+  display: block;
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+/* Center the hurricane's painted shape within the HUD control. */
+.ctfx-hud-button.control-icon {
+  display: grid;
+  place-items: center;
+}
+.ctfx-hud-button.control-icon > i {
+  margin: 0;
+  line-height: 1;
+  transform: translate(2px, 2px);
+}
