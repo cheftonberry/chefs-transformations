@@ -6,6 +6,9 @@ Add animated transformations and saved forms to your actors in **D&D5e** and **P
 
 1. Enable the module in your world.
 2. As GM, right-click an actor in the Actors directory and select **Configure Transformations**.
+
+   ![Actor context menu showing Configure Transformations](assets/screenshots/actor-right-click.png)
+
 3. On the **Animation** tab, choose an animation, optional audio, and **Sustain Aura**. Use **Set as Campaign Default** to apply these settings as the campaign default.
 4. On **Transformation Presets**, drag in the actor you want to transform into, configure its options, and save.
 5. Use the token’s **Transformations** button to choose a saved form or **Revert to original form**.
