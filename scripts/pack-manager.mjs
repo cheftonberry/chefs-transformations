@@ -1,7 +1,7 @@
 import "../libs/jszip.min.js";
 import {validatePack} from "./animation-catalog.mjs";
 const MODULE_ID = "chefs-transformations";
-export const PACK_IMPORTS_ENABLED = false;
+export const PACK_IMPORTS_ENABLED = true;
 const STORAGE_ROOT = "chefs-transformations/animation-packs";
 let busy = false;
 
@@ -103,7 +103,10 @@ export class TransformationPackManager extends HandlebarsApplicationMixin(Applic
   };
 
   async _prepareContext(_options) {
-    return {packs: Object.values(game.settings.get(MODULE_ID, "installedPacks") ?? {}), isGM: game.user.isGM};
+    const titles = {"patreon-paid": "Patreon Sous Chef Pack", "patreon-free": "Patreon Free Pack"};
+    const packs = Object.values(game.settings.get(MODULE_ID, "installedPacks") ?? {})
+      .map(pack => ({...pack, title: titles[pack.id] ?? pack.title}));
+    return {packs, isGM: game.user.isGM};
   }
 
   _fitToContent() {

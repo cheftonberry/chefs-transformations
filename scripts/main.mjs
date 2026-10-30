@@ -422,6 +422,7 @@ function renderPanel(panel, app, state) {
   const navigation = `<nav class="ctfx-pages" aria-label="Transformation configuration pages">
     <button type="button" data-ctfx-page="animation" ${state.page === "animation" ? 'aria-current="page"' : ""}>Animation</button>
     <button type="button" data-ctfx-page="presets" ${state.page === "presets" ? 'aria-current="page"' : ""}>Transformation Presets</button>
+    ${Object.keys(game.settings.get(MODULE_ID, "installedPacks") ?? {}).length === 0 ? '<a class="ctfx-more-animations" href="https://www.patreon.com/ChefsCauldron/posts/module-master-166505944" target="_blank" rel="noopener noreferrer">Get more animations here</a>' : ""}
   </nav>`;
   const setPage = () => {
     panel.insertAdjacentHTML("afterbegin", navigation);

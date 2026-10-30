@@ -1,6 +1,7 @@
 .ctfx-configuration .window-content { overflow-y: auto; }
 .ctfx-configuration .dialog-content { min-width: 0; }
 .ctfx-configuration .ctfx-pages { display: flex; gap: 6px; margin-bottom: 16px; border-bottom: 1px solid #ffffff20; }
+.ctfx-configuration .ctfx-more-animations { margin-left: auto; align-self: center; font-size: 12px; text-align: right; }
 .ctfx-configuration .ctfx-pages button { width: auto; min-height: 36px; padding: 0 12px; border: 0; border-radius: 4px 4px 0 0; background: transparent; }
 .ctfx-configuration .ctfx-pages button[aria-current="page"] { background: #ffffff16; box-shadow: inset 0 -2px #b99864; }
 .ctfx-configuration .ctfx-preset-page { display: grid; gap: 16px; }
